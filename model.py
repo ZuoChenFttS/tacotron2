@@ -45,7 +45,7 @@ class Attention(nn.Module):
         """
         PARAMS
         ------
-        query: decoder output (batch, n_mel_channels * n_frames_per_step)
+        query: Encoder's self.attention_hidden; attention rnn last output (B, attention_rnn_dim)
         processed_memory: processed encoder outputs (B, T_in, attention_dim)
         attention_weights_cat: cumulative and prev. att weights (B, 2, max_time)
 
